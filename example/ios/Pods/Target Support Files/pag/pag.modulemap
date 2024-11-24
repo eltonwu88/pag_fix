@@ -1,0 +1,6 @@
+module pag {
+  umbrella header "pag-umbrella.h"
+
+  export *
+  module * { export * }
+}

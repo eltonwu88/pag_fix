@@ -1,0 +1,39 @@
+group 'com.example.flutter_pag_plugin'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.20"
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 19
+    }
+}
+
+
+dependencies {
+    implementation "com.tencent.tav:libpag:4.1.49"
+    implementation 'com.jakewharton:disklrucache:2.0.2'
+}
